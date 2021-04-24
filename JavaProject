@@ -1,0 +1,32 @@
+package Game;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int start = 1;
+		int end = 10;
+
+		int value = (int) (Math.random()*11);
+
+		System.out.println("The computer choose a number between "+ start+ " and "+ end);
+		System.out.println("Guess the number: ");
+		int guess = 0;
+
+		while(guess != value) {
+			 int text = sc.nextInt();
+			 guess = text;
+
+			if(guess < value) {
+				 System.out.println("The number is Higher");
+			} else if(guess > value) {
+				 System.out.println("The number is Lower");
+			}
+		}
+		  System.out.println("Congratulations!!! You guess the number. You won. "); 
+	}
+
+}
